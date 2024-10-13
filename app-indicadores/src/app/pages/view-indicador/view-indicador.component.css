@@ -1,0 +1,79 @@
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+main {
+    color: rgb(255, 255, 255);
+    background: radial-gradient(#000000, #000000, #082038);
+}
+
+.card-color {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.715);
+    font-weight: bold;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(#5892be, #5892be, #5892be);
+}
+
+.li-color {
+    color: white;
+    margin: 1px;
+    box-shadow: 1px 1px 2px #0b8f0b;
+    font-weight: bold;
+    font-family: sans-serif;
+    background: linear-gradient(#ecac5b, #ecac5b, #ecac5b);
+}
+
+.center {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll {
+    max-height: 60vh;
+    overflow: auto;
+}
+
+.scroll2 {
+    max-height: 40vh;
+    overflow: auto;
+}
+
+.separar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonAdd {
+    background: none;
+    border: none;
+}
+
+.buttonAdd:hover {
+    background-color: #75b0de;
+}
+
+.li-color:hover{
+    background: #000000;
+}
+
+.AMARRILLO{
+    background-color: yellow;
+}
+
+.ROJO{
+    background-color: red;
+}
+
+.AZUL{
+    background-color: blue;
+}
+
+.VERDE{
+    background-color: green;
+}

@@ -1,0 +1,12 @@
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\controller\IndicadorController.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\db\model\RegDetalleIndicador.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\db\model\RegIndicadores.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\db\repository\IDetalleIndicadorRepository.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\db\repository\IIndicadorRepository.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\dto\DetalleIndicadorDto.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\dto\IndicadorDto.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\IndicadoresApplication.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\mapper\DetalleIndicadorMapper.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\mapper\IndicadorMapper.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\services\IIndicadorService.java
+C:\Users\Brayan\Documents\NetBeansProjects\indicadores\src\main\java\com\api\indicadores\services\IndicadorServiceImpl.java

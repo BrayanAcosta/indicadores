@@ -1,0 +1,103 @@
+<main class="center">
+    <div class="container h-75">
+        <div class="card card-color">
+            <div class="card-body">
+                <div class="row mb-2">
+                    <div class="col">
+                        <div class="card card-color">
+                            <div class="card-body separar">
+                                <p>Registro de Indicadores</p>
+                                <button (click)="openDialog()" class="btn btn-success buttonAdd">
+                                    NUEVO INDICADOR
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mt-2">
+                        <div class="card card-color">
+                            <div class="card-body">
+                                <div class="row scroll">
+                                    <ul class="list-group">
+                                        <li *ngFor="let item of listaIdicadores" (click)="abrir(item.indId)"
+                                            class="list-group-item li-color">{{ item.indNombre }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 mt-2">
+                        <div *ngIf="isVisible" class="card card-color">
+                            <div class="card-body">
+                                <div class="row separar">
+                                    <p>Datos del Indicador</p>
+                                    <button (click)="abrirActualizar()" class="btn btn-success buttonAdd">
+                                        NUEVO REGISTRO
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>NOMBRE</label>
+                                        <p>{{ indicador.indNombre }}</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label>MINIMO</label>
+                                        <p>{{ indicador.indValorMinimo }}</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label>ESPERADO</label>
+                                        <p>{{ indicador.indValorEsperado }}</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label>MAXIMO</label>
+                                        <p>{{ indicador.indValorMaximo }}</p>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label>MEDIDA ACTUAL</label>
+                                        <p>{{ indicador.indValorMedida }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="isVisible" class="card card-color">
+                            <div class="card-body">
+                                <div class="row">
+                                    <p>Historial</p>
+                                </div>
+                                <div class="row scroll2">
+                                    <table class="table card-color">
+                                        <thead>
+                                            <tr>
+                                                <th>FECHA</th>
+                                                <th>VALOR MINIMO</th>
+                                                <th>VALOR ESPERADO</th>
+                                                <th>VALOR MAXIMO</th>
+                                                <th>VALOR MEDIDA</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let itemHis of listadoHistorial">
+                                                <td>{{convertToDate(itemHis.fecha) | date:'yyyy/MM/dd'}}</td>
+                                                <td>{{itemHis.valor_minimo}}</td>
+                                                <td>{{itemHis.valor_esperado}}</td>
+                                                <td>{{itemHis.valor_maximo}}</td>
+                                                <td>{{itemHis.valor_medida}}</td>
+                                                <td class="{{itemHis.color}}">
+
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</main>

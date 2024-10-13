@@ -1,0 +1,57 @@
+<mat-dialog-content class="mat-typography">
+    <div class="container">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <h2>Registrar Indicador</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" class="form-control"  maxlength="100" formControlName="nombre" />
+                    <small *ngIf="myForm.get('nombre')?.errors?.['maxlength']">No puede exceder los 100 caracteres.</small>
+                    <div *ngIf="myForm.get('nombre')?.invalid && myForm.get('nombre')?.touched">
+                        El nombre es requerido.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="valorEspe">Valor Esperado:</label>
+                    <input id="valorEspe" type="number" class="form-control" formControlName="valorEspe"  maxlength="10"/>
+                    <small *ngIf="myForm.get('valorEspe')?.errors?.['maxlength']">No puede exceder los 10 caracteres.</small>
+                    <div *ngIf="myForm.get('valorEspe')?.invalid && myForm.get('valorEspe')?.touched">
+                        Valor esperado Invalido
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="valorMini">Valor Minimo:</label>
+                    <input id="valorMini" type="number" class="form-control" formControlName="valorMini"  maxlength="10"/>
+                    <small *ngIf="myForm.get('valorMini')?.errors?.['maxlength']">No puede exceder los 10 caracteres.</small>
+                    <div *ngIf="myForm.get('valorMini')?.invalid && myForm.get('valorMini')?.touched">
+                        Valor esperado Invalido
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="valorMax">Valor Maximo:</label>
+                    <input id="valorMax" type="number" class="form-control" formControlName="valorMax"  maxlength="10"/>
+                    <small *ngIf="myForm.get('valorMax')?.errors?.['maxlength']">No puede exceder los 10 caracteres.</small>
+                    <div *ngIf="myForm.get('valorMax')?.invalid && myForm.get('valorMax')?.touched">
+                        Valor esperado Invalido
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary w-100" [disabled]="myForm.invalid">Enviar</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 mt-2">
+                    <button type="button" class="btn btn-danger w-100" >CANCELAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</mat-dialog-content>

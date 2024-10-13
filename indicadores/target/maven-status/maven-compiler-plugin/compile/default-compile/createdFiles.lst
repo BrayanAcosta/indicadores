@@ -1,0 +1,12 @@
+com\api\indicadores\db\model\RegDetalleIndicador.class
+com\api\indicadores\mapper\DetalleIndicadorMapper.class
+com\api\indicadores\controller\IndicadorController.class
+com\api\indicadores\db\model\RegIndicadores.class
+com\api\indicadores\dto\IndicadorDto.class
+com\api\indicadores\db\repository\IDetalleIndicadorRepository.class
+com\api\indicadores\IndicadoresApplication.class
+com\api\indicadores\mapper\IndicadorMapper.class
+com\api\indicadores\services\IIndicadorService.class
+com\api\indicadores\db\repository\IIndicadorRepository.class
+com\api\indicadores\services\IndicadorServiceImpl.class
+com\api\indicadores\dto\DetalleIndicadorDto.class

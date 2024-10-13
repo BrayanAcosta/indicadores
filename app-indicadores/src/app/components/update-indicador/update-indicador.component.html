@@ -1,0 +1,76 @@
+<mat-dialog-content class="mat-typography">
+    <div class="container">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <h2>Registrar Indicador</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="valorEspe">Valor Esperado:</label>
+                    <input id="valorEspe" type="number" class="form-control" formControlName="valorEspe"  maxlength="10"/>
+                    <small *ngIf="myForm.get('valorEspe')?.errors?.['maxlength']">No puede exceder los 10 caracteres.</small>
+                    <div *ngIf="myForm.get('valorEspe')?.invalid && myForm.get('valorEspe')?.touched">
+                        Valor esperado Invalido
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="valorMini">Valor Minimo:</label>
+                    <input id="valorMini" type="number" class="form-control" formControlName="valorMini"  maxlength="10"/>
+                    <small *ngIf="myForm.get('valorMini')?.errors?.['maxlength']">No puede exceder los 10 caracteres.</small>
+                    <div *ngIf="myForm.get('valorMini')?.invalid && myForm.get('valorMini')?.touched">
+                        Valor esperado Invalido
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="valorMax">Valor Maximo:</label>
+                    <input id="valorMax" type="number" class="form-control" formControlName="valorMax"  maxlength="10"/>
+                    <small *ngIf="myForm.get('valorMax')?.errors?.['maxlength']">No puede exceder los 10 caracteres.</small>
+                    <div *ngIf="myForm.get('valorMax')?.invalid && myForm.get('valorMax')?.touched">
+                        Valor esperado Invalido
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="valorMed">Valor Medida:</label>
+                    <input type="number" id="valorMed" class="form-control" formControlName="valorMed"  maxlength="10"/>
+                    <small *ngIf="myForm.get('valorMed')?.errors?.['maxlength']">No puede exceder los 10 caracteres.</small>
+                    <div *ngIf="myForm.get('valorMed')?.invalid && myForm.get('valorMed')?.touched">
+                        Valor esperado Invalido
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <label for="fecha">Fecha:</label>
+                        <input id="fecha" type="date" class="form-control" formControlName="fecha"/>
+                        <div *ngIf="myForm.get('fecha')?.invalid && myForm.get('fecha')?.touched">
+                            Valor esperado Invalido
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="descr">Descripcion:</label>
+                    <textarea id="descr" class="form-control" formControlName="descr"  maxlength="200"></textarea>
+                    <small *ngIf="myForm.get('descr')?.errors?.['maxlength']">No puede exceder los 200 caracteres.</small>
+                    <div *ngIf="myForm.get('descr')?.invalid && myForm.get('descr')?.touched">
+                        Valor esperado Invalido
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary w-100" [disabled]="myForm.invalid">Enviar</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 mt-2">
+                    <button type="button" class="btn btn-danger w-100" (click)="close()" >CANCELAR</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</mat-dialog-content>
